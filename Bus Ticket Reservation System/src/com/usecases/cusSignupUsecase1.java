@@ -7,11 +7,11 @@ import com.dao.CustomerDao;
 import com.dao.CustomerDaoImpl;
 
 public class cusSignupUsecase1 {
-	
+
 	public static boolean cusSignup() {
-		
+
 		boolean flag = false;
-		
+
 		try {
 			Scanner sc = new Scanner(System.in);
 			System.out.println("Enter Username");
@@ -21,25 +21,24 @@ public class cusSignupUsecase1 {
 			System.out.println("Enter FirstName");
 			String firstName = sc.next();
 			System.out.println("Enter LastName");
-			String lastName= sc.next();
+			String lastName = sc.next();
 			sc.nextLine();
 			System.out.println("Enter Address");
 			String address = sc.nextLine();
 			System.out.println("Enter Mobile");
-			String mobile= sc.next();
-			
+			String mobile = sc.next();
+
 			CustomerDao cdao = new CustomerDaoImpl();
 			String result = cdao.cusSignUp(username, password, firstName, lastName, address, mobile);
-			if(result=="Signup Successfully") {
+			if (result == "Signup Successfully") {
 				System.out.println(result);
 				flag = true;
-			}else {
+			} else {
 				System.out.println(result);
 			}
-		}
-		catch(InputMismatchException e) {
+		} catch (InputMismatchException e) {
 			System.out.println("Invalid Input");
 		}
 		return flag;
 	}
-}	
+}
