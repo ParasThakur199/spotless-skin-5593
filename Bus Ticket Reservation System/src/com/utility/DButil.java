@@ -16,14 +16,9 @@ public class DButil {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			
-			try {
-				conn = DriverManager.getConnection(url,username,password);
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
+			conn = DriverManager.getConnection(url,username,password);
+			
+		}catch (ClassNotFoundException | SQLException e) {
 			e.printStackTrace();
 		}
 		return conn;
