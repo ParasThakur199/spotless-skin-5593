@@ -8,11 +8,22 @@ public class Customer {
 	private String lastName;
 	private String address;
 	private String mobile;
-	
-	public Customer() {}
 
-	public Customer(int cusId, String username, String password, String firstName, String lastName, String address,
-			String mobile) {
+	public Customer() {
+		super();
+	}
+
+	public Customer(String username, String password, String firstName, String lastName, String address, String mobile) {
+		super();
+		this.username = username;
+		this.password = password;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.address = address;
+		this.mobile = mobile;
+	}
+
+	public Customer(int cusId, String username, String password, String firstName, String lastName, String address, String mobile) {
 		super();
 		this.cusId = cusId;
 		this.username = username;
@@ -84,5 +95,5 @@ public class Customer {
 		return "Customer [cusId=" + cusId + ", username=" + username + ", password=" + password + ", firstName="
 				+ firstName + ", lastName=" + lastName + ", address=" + address + ", mobile=" + mobile + "]";
 	}
-	
+
 }
