@@ -1,6 +1,7 @@
 package com.dao;
 
 import com.Bean.Customer;
+import com.exceptions.BusException;
 import com.exceptions.CustomerException;
 
 public interface CustomerDao {
@@ -9,4 +10,6 @@ public interface CustomerDao {
 	public String cusSignUp(Customer customer);
 	
 	public Customer cusLogin(String username,String password)throws CustomerException;
+	
+	public String bookticket(String bName,int cusId,int no)throws BusException;
 }
