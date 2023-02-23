@@ -109,23 +109,51 @@ public class CustomerDaoImpl implements CustomerDao {
 
 				PreparedStatement ps1 = conn.prepareStatement("Select dateDiff(?,current_date()) as date");
 				ps1.setDate(1, departure);
-				
+
 				ResultSet rs1 = ps1.executeQuery();
 				int days = 0;
-				if(rs1.next()) {
+				if (rs1.next()) {
 					days = rs1.getInt("date");
 				}
-				if(days<0) {
+				if (days < 0) {
 					throw new BusException("Booking is not Available in this date");
-				}else if(availSeats>=noOfSeats) {
+				} else if (availSeats >= noOfSeats) {
 					int seatFrom = totalSeats - availSeats + 1;
-					int seatTo = seatFrom + noOfSeats -1;
+					int seatTo = seatFrom + noOfSeats - 1;
 					fare = fare * noOfSeats;
+
+					PreparedStatement ps2 = conn
+							.prepareStatement("Insert into booking(cusId, busNo, seatFrom, seatTo) values(?, ?, ?, ?)");
+					ps2.setInt(1, cusId);
+					ps2.setInt(2, busNo);
+					ps2.setInt(3, seatFrom);
+					ps2.setInt(4, seatTo);
+
+					int p = ps2.executeUpdate();
+					if (p > 0) {
+						PreparedStatement ps3 = conn.prepareStatement("Update bus set availSeats = ? where busNo = ?");
+						availSeats = availSeats - noOfSeats;
+						ps3.setInt(1, availSeats);
+						ps3.setInt(2, busNo);
+
+						int y = ps3.executeUpdate();
+						if (y <= 0) {
+							throw new BusException("Available Seats are not Updated");
+						}
+						System.out.println("--------------------------------------------" + "\n" + "Customer Id is : "
+								+ cusId + "\n" + "Bus No is : " + busNo + "\n" + "Seat No is from : " + seatFrom
+								+ " to " + seatTo + "\n" + "Bus fare is : " + fare + "\n"
+								+ "Booking yet to be confirm by Adminstrator" + "\n");
+
+						res = "Ticket Booked Successfully";
+					}
 				}
+			}else {
+				throw new BusException("Bus with " + bName + " is not Available");
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			throw new BusException(e.getMessage());
 		}
 		return res;
 
