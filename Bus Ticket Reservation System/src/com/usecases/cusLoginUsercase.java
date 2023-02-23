@@ -8,6 +8,7 @@ import com.dao.CustomerDao;
 import com.dao.CustomerDaoImpl;
 import com.exceptions.CustomerException;
 
+
 public class cusLoginUsercase {
 	public static Customer CusLogin() {
 		Customer customer = null;
@@ -23,7 +24,7 @@ public class cusLoginUsercase {
 			CustomerDao cdd = new CustomerDaoImpl();
 			try {
 				customer = cdd.cusLogin(userName, password);
-				System.out.print("Welcome" + customer.getFirstName() + customer.getLastName());
+				System.out.print("Welcome " + customer.getFirstName() +" "+ customer.getLastName());
 			} catch (CustomerException e) {
 				// TODO Auto-generated catch block
 				System.out.println(e.getMessage());
@@ -35,3 +36,4 @@ public class cusLoginUsercase {
 		return customer;
 	}
 }
+
