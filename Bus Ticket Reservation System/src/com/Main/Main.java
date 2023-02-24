@@ -3,6 +3,7 @@ package com.Main;
 import java.sql.Connection;
 
 import com.Bean.Customer;
+import com.usecases.BookTicketbNameUsecase;
 import com.usecases.cusLoginUsercase;
 import com.usecases.cusSignupUsecase1;
 import com.usecases.cusSignupUsecase2;
@@ -23,6 +24,7 @@ public class Main {
 //		boolean flag = cusSignupUsecase2.cusSignUp();
 //		System.out.println(flag);
 		
-		Customer customer = cusLoginUsercase.CusLogin();
+//		Customer customer = cusLoginUsercase.CusLogin();
+//		BookTicketbNameUsecase.BookTicketbName(customer);
 	}
 }

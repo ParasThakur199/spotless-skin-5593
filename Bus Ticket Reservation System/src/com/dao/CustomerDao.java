@@ -12,4 +12,6 @@ public interface CustomerDao {
 	public Customer cusLogin(String username,String password)throws CustomerException;
 	
 	public String bookticket(String bName,int cusId,int no)throws BusException;
+	
+	public String cancelTicket(String bName,int cusId)throws BusException;
 }
