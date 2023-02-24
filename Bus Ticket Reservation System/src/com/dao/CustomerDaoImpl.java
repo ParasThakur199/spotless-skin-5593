@@ -148,7 +148,7 @@ public class CustomerDaoImpl implements CustomerDao {
 						res = "Ticket Booked Successfully";
 					}
 				}
-			}else {
+			} else {
 				throw new BusException("Bus with " + bName + " is not Available");
 			}
 		} catch (SQLException e) {
@@ -157,5 +157,61 @@ public class CustomerDaoImpl implements CustomerDao {
 		}
 		return res;
 
+	}
+
+	@Override
+	public String cancelTicket(String bName, int cusId) throws BusException {
+		String res = "Ticket Cancellation Failed";
+
+		try (Connection conn = DButil.ProvideConnection()) {
+			PreparedStatement ps = conn.prepareStatement("Select * from bus where bName = ?");
+			ps.setString(1, bName);
+
+			ResultSet rs = ps.executeQuery();
+			if (rs.next()) {
+				int busNo = rs.getInt("busNo");
+				int availSeats = rs.getInt("availSeats");
+
+				PreparedStatement ps1 = conn.prepareStatement("Select * from booking where busNo = ? and cusId = ?");
+				ps1.setInt(1, busNo);
+				ps1.setInt(2, cusId);
+
+				ResultSet rs1 = ps1.executeQuery();
+				boolean flag = false;
+				int count = 0;
+				while (rs1.next()) {
+					flag = true;
+					int seatFrom = rs1.getInt("seatFrom");
+					int seatTo = rs1.getInt("seatTo");
+					count += seatTo - seatFrom + 1;
+				}
+				if (flag) {
+					PreparedStatement ps2 = conn.prepareStatement("Delete from booking where busNo = ? and cusId = ?");
+					ps2.setInt(1, busNo);
+					ps2.setInt(2, cusId);
+
+					int x = ps2.executeUpdate();
+					if (x > 0) {
+						PreparedStatement ps3 = conn.prepareStatement("Update bus set availseats = ? where busNo = ?");
+						availSeats = availSeats + count;
+						ps3.setInt(1, availSeats);
+						ps3.setInt(2, busNo);
+						int y = ps3.executeUpdate();
+
+						if (y <= 0) {
+							throw new BusException("Available seats is not Updated");
+						}
+						res = "Ticket Cancelled Successfully";
+					}
+				} else {
+					res = "No Booking Found";
+				}
+			}else {
+				throw new BusException("Bus with "+bName+" is not Available");
+			}
+		} catch (SQLException e) {
+			throw new BusException(e.getMessage());
+		}
+		return res;
 	}
 }
