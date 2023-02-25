@@ -67,7 +67,7 @@ public class AdminDaoImpl implements AdminDao {
 
 			int s = ps.executeUpdate();
 			if (s > 0) {
-				str = "Bus Recorded Successfully";
+				str = "Bus Record added Successfully";
 			}
 		} catch (SQLException e) {
 			System.out.println(e.getMessage());
@@ -105,20 +105,21 @@ public class AdminDaoImpl implements AdminDao {
 			while (rs1.next()) {
 				flag = true;
 
-				System.out.println(ConsoleColors.ROSY_PINK + "----------------------------------------------------" + ConsoleColors.RESET);
+				System.out.println(ConsoleColors.ROSY_PINK + "----------------------------------------------------"+ ConsoleColors.RESET);
 				System.out.println(ConsoleColors.ROSY_PINK + "Bus Id : " + rs1.getInt("bId") + ConsoleColors.RESET);
 				System.out.println(ConsoleColors.ROSY_PINK + "Bus No : " + rs1.getInt("busNo") + ConsoleColors.RESET);
 				System.out.println(ConsoleColors.ROSY_PINK + "Total tickets : " + (rs1.getInt("seatTo") - rs1.getInt("seatFrom") + 1) + ConsoleColors.RESET);
 				if (rs1.getInt("status") == 1) {
 					System.out.println(ConsoleColors.ROSY_PINK + "Status : Booked" + ConsoleColors.RESET);
-				}else {
+				} else {
 					System.out.println(ConsoleColors.ROSY_PINK + "Status : Pending" + ConsoleColors.RESET);
 				}
 				System.out.println(ConsoleColors.ROSY_PINK + "----------------------------------------------------"+ ConsoleColors.RESET);
 			}
 
-			if (flag == false)
+			if (flag == false) {
 				System.out.println(ConsoleColors.RED_BACKGROUND + "No tickets found" + ConsoleColors.RESET);
+			}
 		} catch (SQLException s) {
 			System.out.println(ConsoleColors.RED_BACKGROUND + s.getMessage() + ConsoleColors.RESET);
 		}
