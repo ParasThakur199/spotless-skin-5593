@@ -105,7 +105,7 @@ public class AdminDaoImpl implements AdminDao {
 			while (rs1.next()) {
 				flag = true;
 
-				System.out.println(ConsoleColors.ROSY_PINK + "----------------------------------------------------"+ ConsoleColors.RESET);
+				System.out.println(ConsoleColors.ROSY_PINK + "-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="+ ConsoleColors.RESET);
 				System.out.println(ConsoleColors.ROSY_PINK + "Bus Id : " + rs1.getInt("bId") + ConsoleColors.RESET);
 				System.out.println(ConsoleColors.ROSY_PINK + "Bus No : " + rs1.getInt("busNo") + ConsoleColors.RESET);
 				System.out.println(ConsoleColors.ROSY_PINK + "Total tickets : " + (rs1.getInt("seatTo") - rs1.getInt("seatFrom") + 1) + ConsoleColors.RESET);
@@ -114,7 +114,7 @@ public class AdminDaoImpl implements AdminDao {
 				} else {
 					System.out.println(ConsoleColors.ROSY_PINK + "Status : Pending" + ConsoleColors.RESET);
 				}
-				System.out.println(ConsoleColors.ROSY_PINK + "----------------------------------------------------"+ ConsoleColors.RESET);
+				System.out.println(ConsoleColors.ROSY_PINK + "-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="+ ConsoleColors.RESET);
 			}
 
 			if (flag == false) {

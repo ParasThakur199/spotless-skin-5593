@@ -20,7 +20,7 @@ import com.utility.DButil;
 
 public class Main {
 	static void AdminOrCustomer() {
-		System.out.println(ConsoleColors.PURPLE + "+-=-=-=-=-=-=-=-=-=-=-=-=-=-+" + "\n"
+		System.out.println(ConsoleColors.BLUE + "+-=-=-=-=-=-=-=-=-=-=-=-=-=-+" + "\n"
 						 						   + "| 1. Login As Administrator |" + "\n"
 						 						   + "| 2. Login As Customer      |" + "\n"
 						 						   + "| 3. Exit                   |" + "\n"
@@ -41,19 +41,19 @@ public class Main {
 		}
 		
 		if (choice == 1) {
-			System.out.println(ConsoleColors.ROSY_PINK + "Welcome Admin ! Please Login to your account" + ConsoleColors.RESET);
+			System.out.println(ConsoleColors.GREEN + "Welcome Admin !! Please Login to your Account" + ConsoleColors.RESET);
 			AdminLogin();
 		}
 		else if (choice == 2) {
-			System.out.println(ConsoleColors.ROSY_PINK + "Welcome Customer !" + ConsoleColors.RESET);
+			System.out.println(ConsoleColors.ROSY_PINK + "Welcome Customer !!" + ConsoleColors.RESET);
 			customerLoginOrSignup();
 		}
 		else if (choice == 3) {
-			System.out.println(ConsoleColors.ROSY_PINK + "Thank you ! Visit again" + ConsoleColors.RESET);
+			System.out.println(ConsoleColors.ROSY_PINK + "Thank you !! Visit Again" + ConsoleColors.RESET);
 			System.exit(0);
 		}
 		else {
-			System.out.println(ConsoleColors.RED_BACKGROUND + "Please choose a number from below options" + ConsoleColors.RESET);
+			System.out.println(ConsoleColors.RED_BACKGROUND + "Please choose a number from below Options !!" + ConsoleColors.RESET);
 			AdminOrCustomer();
 		}
 	}
@@ -69,7 +69,7 @@ public class Main {
 	}
 	
 	static void adminMethods() {
-		System.out.println(ConsoleColors.PURPLE + "+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=+" + "\n"
+		System.out.println(ConsoleColors.BLUE + "+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=+" + "\n"
 						 + "| Welcome Admin                  |" + "\n"
 						 + "| 1. Add Bus                     |" + "\n"
 						 + "| 2. Confirm Tickets of Customer |" + "\n"
@@ -124,7 +124,7 @@ public class Main {
 	}
 	
 	static void customerLoginOrSignup() {
-		System.out.println(ConsoleColors.PURPLE + "+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=+" + "\n"
+		System.out.println(ConsoleColors.BLUE + "+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=+" + "\n"
 				                                + "| 1. Login to your Account       |" + "\n"
 				                                + "| 2. Don't have Account? Sign Up |" + "\n"
 				                                + "| 3. Back                        |" + "\n"
@@ -185,7 +185,7 @@ public class Main {
 	}
 	
 	static void customerMethods(Customer customer) {
-		System.out.println(ConsoleColors.PURPLE + "+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=+" + "\n"
+		System.out.println(ConsoleColors.BLUE + "+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=+" + "\n"
 				 		 + "| 1. Book Bus Ticket             |" + "\n"
 				         + "| 2. Cancel Bus Ticket           |" + "\n"
 				         + "| 3. View Status of your Tickets |" + "\n"

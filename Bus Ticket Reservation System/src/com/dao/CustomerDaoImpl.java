@@ -64,8 +64,8 @@ public class CustomerDaoImpl implements CustomerDao {
 	@Override
 	public Customer cusLogin(String username, String password) throws CustomerException {
 		Customer customer = null;
-		Connection conn = DButil.ProvideConnection();
-		try {
+
+		try(Connection conn = DButil.ProvideConnection()) {
 			PreparedStatement ps = conn.prepareStatement("Select * from Customer where username = ? and password = ?");
 			ps.setString(1, username);
 			ps.setString(2, password);
