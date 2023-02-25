@@ -127,6 +127,6 @@ public class ConsoleColors {
 	    public static final String BLUE_BACKGROUND_BRIGHT = "\033[0;104m";// BLUE
 	    public static final String PURPLE_BACKGROUND_BRIGHT = "\033[0;105m"; // PURPLE
 	    public static final String CYAN_BACKGROUND_BRIGHT = "\033[0;106m"; // CYAN
-	    public static final String WHITE_BACKGROUND_BRIGHT = "\033[0;107m"; // WHITE
+	    public static final String WHITE_BACKGROUND_BRIGHT = "\033[0;107m"; // WHITE 
 }
 
