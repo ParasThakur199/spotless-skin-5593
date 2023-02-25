@@ -53,14 +53,14 @@ public class AddBus2Usecase {
 			String result = dao.addBus(bus);
 			
 			if (result.equals("Bus Record added Successfully")) {
-				System.out.println(ConsoleColors.GREEN_BACKGROUND + result + ConsoleColors.RESET);
+				System.out.println(ConsoleColors.LIGHT_GREEN_BACKGROUND + result + ConsoleColors.RESET);
 			}
 			else {
 				System.out.println(ConsoleColors.RED_BACKGROUND + result + ConsoleColors.RESET);
 			}
 		}
 		catch (InputMismatchException e) {
-			System.out.println(ConsoleColors.RED_BACKGROUND + "Invalid input" + ConsoleColors.RESET);
+			System.out.println(ConsoleColors.RED + "Invalid input" + ConsoleColors.RESET);
 		}
 	}
 }

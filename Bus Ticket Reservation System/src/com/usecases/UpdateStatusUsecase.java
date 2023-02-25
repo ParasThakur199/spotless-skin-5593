@@ -25,7 +25,7 @@ public class UpdateStatusUsecase {
 		}
 
 		if (flag) {
-			System.out.println(ConsoleColors.GREEN_BACKGROUND + result + ConsoleColors.RESET);
+			System.out.println(ConsoleColors.LIGHT_GREEN_BACKGROUND + result + ConsoleColors.RESET);
 		} else {
 			System.out.println(ConsoleColors.RED_BACKGROUND + result + ConsoleColors.RESET);
 		}

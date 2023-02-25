@@ -20,11 +20,11 @@ import com.utility.DButil;
 
 public class Main {
 	static void AdminOrCustomer() {
-		System.out.println(ConsoleColors.PURPLE + "+---------------------------+" + "\n"
+		System.out.println(ConsoleColors.PURPLE + "+-=-=-=-=-=-=-=-=-=-=-=-=-=-+" + "\n"
 						 						   + "| 1. Login As Administrator |" + "\n"
 						 						   + "| 2. Login As Customer      |" + "\n"
 						 						   + "| 3. Exit                   |" + "\n"
-						 						   + "+---------------------------+" + ConsoleColors.RESET);
+						 						   + "+-=-=-=-=-=-=-=-=-=-=-=-=-=-+" + ConsoleColors.RESET);
 		choice();
 	}
 	
@@ -69,14 +69,14 @@ public class Main {
 	}
 	
 	static void adminMethods() {
-		System.out.println(ConsoleColors.PURPLE + "+--------------------------------+" + "\n"
+		System.out.println(ConsoleColors.PURPLE + "+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=+" + "\n"
 						 + "| Welcome Admin                  |" + "\n"
 						 + "| 1. Add Bus                     |" + "\n"
 						 + "| 2. Confirm Tickets of Customer |" + "\n"
 						 + "| 3. View All Bookings           |" + "\n"
 						 + "| 4. Back                        |" + "\n"
 						 + "| 5. Exit                        |" + "\n"
-						 + "+--------------------------------+" + ConsoleColors.RESET);
+						 + "+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=+" + ConsoleColors.RESET);
 		
 		Scanner sc = new Scanner(System.in);
 		
@@ -124,12 +124,12 @@ public class Main {
 	}
 	
 	static void customerLoginOrSignup() {
-		System.out.println(ConsoleColors.PURPLE + "+--------------------------------+" + "\n"
+		System.out.println(ConsoleColors.PURPLE + "+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=+" + "\n"
 				                                + "| 1. Login to your Account       |" + "\n"
 				                                + "| 2. Don't have Account? Sign Up |" + "\n"
 				                                + "| 3. Back                        |" + "\n"
 				                                + "| 4. Exit                        |" + "\n"
-				                                + "+--------------------------------+" + ConsoleColors.RESET);
+				                                + "+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=+" + ConsoleColors.RESET);
 		try {
 			Scanner sc = new Scanner(System.in);
 			int choice = sc.nextInt();
@@ -185,13 +185,13 @@ public class Main {
 	}
 	
 	static void customerMethods(Customer customer) {
-		System.out.println(ConsoleColors.PURPLE + "+--------------------------------+" + "\n"
+		System.out.println(ConsoleColors.PURPLE + "+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=+" + "\n"
 				 		 + "| 1. Book Bus Ticket             |" + "\n"
 				         + "| 2. Cancel Bus Ticket           |" + "\n"
 				         + "| 3. View Status of your Tickets |" + "\n"
 				         + "| 4. Back                        |" + "\n"
 				         + "| 5. Exit                        |" + "\n"
-				         + "+--------------------------------+" + ConsoleColors.RESET);
+		                 + "+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=+" + ConsoleColors.RESET);
 		
 		Scanner sc = new Scanner(System.in);
 		
