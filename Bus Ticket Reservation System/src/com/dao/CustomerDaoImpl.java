@@ -214,4 +214,33 @@ public class CustomerDaoImpl implements CustomerDao {
 		}
 		return res;
 	}
+
+	@Override
+	public void viewTicket(int cusId) {
+		boolean flag = false;
+		try(Connection conn = DButil.ProvideConnection()) {
+			PreparedStatement ps = conn.prepareStatement("Select * from booking where cusId=?");
+			ps.setInt(1, cusId);
+			
+			ResultSet rs = ps.executeQuery();
+			while(rs.next()) {
+				flag = true;
+				System.out.println("Bus Id :"+rs.getInt("bId"));
+				System.out.println("Bus No :"+rs.getInt("busNo"));
+				System.out.println("Total Tickets :" +(rs.getByte("seatTo")-rs.getInt("seatFrom")+1));
+				if(rs.getBoolean("status")) {
+					System.out.println("Status : Booked");
+				}else {
+					System.out.println("Status : Pending");
+				}
+			}
+			if(flag == false) {
+				System.out.println("No Tickets found");
+			}
+			
+		} catch (SQLException e) {
+			System.out.println(e.getMessage()); 
+		}
+		
+	}
 }
