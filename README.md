@@ -1,4 +1,4 @@
-<img width="1200" height="700" alt="logo" src = "https://user-images.githubusercontent.com/90348363/221415933-5c52e9e5-9912-4747-8ded-8648a7a8ba9c.png">
+<img width="800" height="600" alt="logo" src = "https://user-images.githubusercontent.com/90348363/221415933-5c52e9e5-9912-4747-8ded-8648a7a8ba9c.png">
 
 # Bus Ticket Reservation System
 
