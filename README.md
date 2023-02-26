@@ -1,4 +1,4 @@
-![Logo](https://drive.google.com/file/d/1hsuzDw-D9RNhETNRjK_owHNgTOiEGIAc/view)
+![Logo](https://user-images.githubusercontent.com/90348363/221415933-5c52e9e5-9912-4747-8ded-8648a7a8ba9c.png)
 
 # Bus Ticket Reservation System
 
@@ -8,4 +8,4 @@
 # 👉 [Click here](https://drive.google.com/file/d/1bbn4JBgGA4eLhT2uzVsrmUG6E26BoOV1/view?usp=sharing) to go through detail explanation of this application 
 
 ## ER diagram
-<img width="839" height="700" alt="pic" src="https://drive.google.com/file/d/1hsuzDw-D9RNhETNRjK_owHNgTOiEGIAc/view">
+<img width="839" height="700" alt="pic" src="https://user-images.githubusercontent.com/90348363/221415866-275fa807-fcf5-4bad-824a-c8d61f2b1b4a.png">
