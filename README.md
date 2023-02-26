@@ -6,3 +6,6 @@
 > Bus ticket reservation system is a Console based Application.
 
 # 👉 [Click here](https://drive.google.com/file/d/1bbn4JBgGA4eLhT2uzVsrmUG6E26BoOV1/view?usp=sharing) to go through detail explanation of this application 
+
+## ER diagram
+<img width="839" height="700" alt="pic" src="https://drive.google.com/file/d/1hsuzDw-D9RNhETNRjK_owHNgTOiEGIAc/view">
