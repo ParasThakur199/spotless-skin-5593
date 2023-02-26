@@ -143,7 +143,7 @@ public class CustomerDaoImpl implements CustomerDao {
 						System.out.println("--------------------------------------------" + "\n" + "Customer Id is : "
 								+ cusId + "\n" + "Bus No is : " + busNo + "\n" + "Seat No is from : " + seatFrom
 								+ " to " + seatTo + "\n" + "Bus fare is : " + fare + "\n"
-								+ "Booking yet to be confirm by Adminstrator" + "\n");
+								+ "Booking yet to be confirmed by Adminstrator" + "\n");
 
 						res = "Ticket Booked Successfully";
 					}
