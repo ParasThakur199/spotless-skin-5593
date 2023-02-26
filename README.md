@@ -20,4 +20,17 @@
 - Customer can book ticket by selecting Source and Destination.
 - Customer can cancel ticket
 
+## Role of Administrator are:
+
+- Login his username and password
+- Provide details like Bus Name, Bus Route, Bus Type –AC/non-AC, seats, departure time and arrival time
+- Provide the confirmation of the seat to the Customer.
+- Provide the Contact persons details after confirmation of the seat
+
+## Technology used 
+
+- Java
+- MySQL
+- JDBC
+
 
