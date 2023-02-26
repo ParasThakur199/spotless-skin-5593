@@ -25,7 +25,7 @@
 
 - Customer can book ticket by selecting Source and Destination.
 - Customer can cancel ticket
-  <img alt="pic" src="https://user-images.githubusercontent.com/90348363/221419990-c264e4ce-78c3-40ac-bec5-2849191186da.png">
+- <img alt="pic" src="https://user-images.githubusercontent.com/90348363/221419990-c264e4ce-78c3-40ac-bec5-2849191186da.png">
 
 ## Role of Administrator are:
 
@@ -33,5 +33,5 @@
 - Provide details like Bus Name, Bus Route, Bus Type –AC/non-AC, seats, departure time and arrival time
 - Provide the confirmation of the seat to the Customer.
 - Provide the Contact persons details after confirmation of the seat
-  <img alt="pic" src="https://user-images.githubusercontent.com/90348363/221419008-377ab1f5-370e-433c-9221-8bd7581db090.png">
+- <img alt="pic" src="https://user-images.githubusercontent.com/90348363/221419008-377ab1f5-370e-433c-9221-8bd7581db090.png">
 
