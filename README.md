@@ -10,6 +10,12 @@
 ## ER diagram
 <img width="839" height="700" alt="pic" src="https://user-images.githubusercontent.com/90348363/221415866-275fa807-fcf5-4bad-824a-c8d61f2b1b4a.png">
 
+## Technology used 
+
+- Java
+- MySQL
+- JDBC
+
 ## Users of this Application :
 
 - Customers
@@ -26,11 +32,4 @@
 - Provide details like Bus Name, Bus Route, Bus Type –AC/non-AC, seats, departure time and arrival time
 - Provide the confirmation of the seat to the Customer.
 - Provide the Contact persons details after confirmation of the seat
-
-## Technology used 
-
-- Java
-- MySQL
-- JDBC
-
 
