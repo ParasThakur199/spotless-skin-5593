@@ -8,7 +8,7 @@
 # [ Live Preview ](https://drive.google.com/file/d/1bbn4JBgGA4eLhT2uzVsrmUG6E26BoOV1/view?usp=sharing) of detailed explaination video. 
 
 ## ER diagram
-<img width="839" height="700" alt="pic" src="https://user-images.githubusercontent.com/90348363/221415866-275fa807-fcf5-4bad-824a-c8d61f2b1b4a.png">
+<img width="800" height="700" alt="pic" src="https://user-images.githubusercontent.com/90348363/221415866-275fa807-fcf5-4bad-824a-c8d61f2b1b4a.png">
 
 ## Technology used 
 
