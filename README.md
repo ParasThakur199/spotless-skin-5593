@@ -25,7 +25,7 @@
 
 - Customer can book ticket by selecting Source and Destination.
 - Customer can cancel ticket
-- <img alt="pic" src="https://user-images.githubusercontent.com/90348363/221419079-052041bf-aab8-4bc4-8c6e-b8a12be48d35.png">
+- <img alt="pic" src="https://user-images.githubusercontent.com/90348363/221419990-c264e4ce-78c3-40ac-bec5-2849191186da.png">
 
 ## Role of Administrator are:
 
