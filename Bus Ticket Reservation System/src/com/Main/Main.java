@@ -166,7 +166,7 @@ public class Main {
 			customerLogin();
 		}
 		else {
-			System.out.println(ConsoleColors.GREEN_BACKGROUND + "Login Successfull" + ConsoleColors.RESET);
+			System.out.println(ConsoleColors.LIGHT_GREEN_BACKGROUND+ "Login Successfully" + ConsoleColors.RESET);
 			customerMethods(customer);
 		}
 		
